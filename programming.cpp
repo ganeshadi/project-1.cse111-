@@ -98,3 +98,33 @@ int main()
     es.in();
     es.mes();
 }
+
+#include<iostream>
+using namespace std;
+class one
+{public:
+	void fun1()
+	{cout<<"we are in base class";
+	
+	}
+};
+class two:public one
+{public:
+	void fun1()
+	{cout<<"we are in derived two class"<<endl;
+	
+	}
+};
+class three:public two
+{public:
+	void fun1()
+	{cout<<"we are in derived three class"<<endl;
+	
+	}
+};
+int main()
+{class three t;
+t.fun1();
+t.one::fun1();
+}
+
